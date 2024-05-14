@@ -13,4 +13,5 @@ public class kafkaConsumer {
     {
         LOGGER.info(String.format("Message received %s", message));
     }
+
 }
