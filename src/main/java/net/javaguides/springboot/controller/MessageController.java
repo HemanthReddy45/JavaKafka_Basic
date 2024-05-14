@@ -23,4 +23,9 @@ public class MessageController {
         kafkaProducer.sendMessage(msg);
         return ResponseEntity.ok("Message sent to the topic");
     }
+    @GetMapping("/validate")
+    public ResponseEntity<String> validate(@RequestParam("data") String name){
+        kafkaProducer.sendMessage(name);
+        return ResponseEntity.ok("Data sent to the topic");
+    }
 }
